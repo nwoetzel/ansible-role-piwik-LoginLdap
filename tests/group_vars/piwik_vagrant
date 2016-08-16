@@ -1,0 +1,16 @@
+piwik_install_location: "/home/vagrant"
+piwik_user:      vagrant
+piwik_group:     vagrant
+piwik_web_user:  vagrant
+piwik_web_group: vagrant
+piwik_download_version: "latest"
+piwik_login_ldap_install_from: "git" 
+piwik_login_ldap_version: "master"
+piwik_login_ldap_download_git: https://github.com/piwik/plugin-LoginLdap.git
+piwik_login_ldap_servers:
+  localhost:
+    hostname: "localhost"
+    port: 389
+    admin_user: "fury"
+    admin_pass: "secrets"
+    base_dn: "dc=avengers,dc=shield,dc=org"

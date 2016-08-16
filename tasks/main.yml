@@ -15,6 +15,11 @@
   command: "./console plugin:activate {{ piwik_login_ldap.plugin.name }}"
   args:
     chdir: "{{ piwik_path }}"
+  changed_when: False
+
+- name: "check if plugin is activated"
+  shell: "grep -F 'Plugins[] = \"LoginLdap\"' {{ piwik_config_file }}"
+  changed_when: False
 
 - name: "add each ldap server to config.ini.php"
   include: "add_server.yml"
