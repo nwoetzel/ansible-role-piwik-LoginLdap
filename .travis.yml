@@ -39,7 +39,9 @@ script:
   # run again to check if it is indempotent
   - ansible-playbook -i inventory test.yml --connection=local > indempotent.log
   - cat indempotent.log
-  - grep -q 'changed=0.*failed=0' indempotent.log
+  - >
+    cat indempotent.log
+    | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
 
