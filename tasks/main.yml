@@ -6,7 +6,7 @@
 
 - name: "set piwik config location"
   set_fact:
-    piwik_config_file: "{{ piwik_path }}/{{ piwik_login_ldap.config.file_name }}"
+    piwik_config_file: "{{ piwik_path }}/{{ piwik_login_ldap.config.filename }}"
 
 - name: "install LoginLdap into piwik plugins"
   include: "install_{{ piwik_login_ldap_install_from }}.yml"
