@@ -9,7 +9,7 @@
     dest: "{{ piwik_config_file }}"
     section: "{{ piwik_login_ldap.plugin.name }}_{{ ldap_server_name }}"
     option: "{{ item.key }}"
-    value: "\"{{ item.value }}\""
+    value: "{{ ( item.value.isdigit() ) | ternary( item.value, '\"' ~ item.value ~ '\"' ) }}"
   with_dict: "{{ ldap_server }}"
 
 - name: "update ldap servers in config"

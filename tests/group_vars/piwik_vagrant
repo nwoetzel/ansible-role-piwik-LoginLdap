@@ -10,7 +10,7 @@ piwik_login_ldap_download_git: https://github.com/piwik/plugin-LoginLdap.git
 piwik_login_ldap_servers:
   localhost:
     hostname: "localhost"
-    port: 389
+    port: "389"
     admin_user: "fury"
     admin_pass: "secrets"
     base_dn: "dc=avengers,dc=shield,dc=org"
