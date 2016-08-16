@@ -1,4 +1,4 @@
-piwik_install_location: "/home/travis"
+piwik_install_location: "/home/travis/html"
 piwik_download_version: "latest"
 piwik_login_ldap_install_from: "git" 
 piwik_login_ldap_version: latest
