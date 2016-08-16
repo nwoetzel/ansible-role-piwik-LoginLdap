@@ -2,5 +2,10 @@
 piwik_login_ldap:
   plugin:
     name: LoginLdap
+  download:
+    github:      https://github.com/piwik/plugin-LoginLdap/archive/
+    marketplace: http://plugins.piwik.org/api/2.0/plugins/LoginLdap/download/
+    version:     3.2.2
+    git:         https://github.com/piwik/plugin-LoginLdap.git
   config:
     filename: config/config.ini.php

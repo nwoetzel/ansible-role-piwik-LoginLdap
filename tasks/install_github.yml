@@ -1,0 +1,6 @@
+---
+- name: "install from github"
+  unarchive:
+    src: "{{ piwik_login_ldap.download.github }}/{{ piwik_login_ldap_version | default( piwik_login_ldap.download.version ) }}.zip"
+    dest: "{{ piwik_plugins_path }}"
+    creates: "{{ piwik_plugins_path }}/{{ piwik_login_ldap.plugin.name }}"

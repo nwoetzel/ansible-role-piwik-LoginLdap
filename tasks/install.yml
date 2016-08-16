@@ -1,0 +1,8 @@
+---
+- name: "install from marketplace"
+  when: piwik_login_ldap_install_from == "marketplace"
+
+- name: "install from github"
+  when: piwik_login_ldap_install_from == "marketplace"
+
+- name: "install from git"

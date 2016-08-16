@@ -2,12 +2,14 @@
 - name: "set piwik install path"
   set_fact:
     piwik_path: "{{ piwik_path | default( piwik_install_location ~ '/piwik' }}"
+    piwik_plugins_path: "{{ piwik_path | default( piwik_install_location ~ '/piwik/plugins' }}"
 
 - name: "set piwik config location"
   set_fact:
     piwik_config_file: "{{ piwik_path }}/{{ piwik_login_ldap.config.file_name }}"
 
 - name: "install LoginLdap into piwik plugins"
+  include: "install_{{ piwik_login_ldap_install_from }}.yml"
 
 - name: "activate plugin"
   command: "./console plugin:activate {{ piwik_login_ldap.plugin.name }}"

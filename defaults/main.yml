@@ -1,6 +1,12 @@
 ---
 # required location of the installation location
 #piwik_path: /var/www/piwik
+# define from where to install; allowed values are: [marketplace,github,git]
+#piwik_login_ldap_install_from: "marketplace" 
+#piwik_login_ldap_version: 3.2.2
+# when installing from git, the repo url can be changed to a fork or such; the piwik_login_ldap_version can be any valid version: http://docs.ansible.com/ansible/git_module.html#options
+#piwik_login_ldap_download_git: https://github.com/piwik/plugin-LoginLdap.git
+
 piwik_login_ldap_servers: []
 # add each server in the form:
 #  server_label1:

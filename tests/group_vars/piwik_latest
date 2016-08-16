@@ -1,2 +1,5 @@
 piwik_install_location: "/tmp"
 piwik_download_version: "latest"
+piwik_login_ldap_install_from: "git" 
+piwik_login_ldap_version: latest
+piwik_login_ldap_download_git: https://github.com/piwik/plugin-LoginLdap.git

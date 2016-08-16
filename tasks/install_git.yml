@@ -1,0 +1,7 @@
+---
+- name: "install from git"
+  git:
+    repo:    "{{ piwik_login_ldap_download_git | default( piwik_login_ldap.download.git ) }}"
+    dest:    "{{ piwik_plugins_path }}/{{ piwik_login_ldap.plugin.name }}"
+    version: "{{ piwik_login_ldap_version | default( piwik_login_ldap.download.version ) }}"
+    update:  no
