@@ -1,0 +1,6 @@
+---
+piwik_login_ldap:
+  plugin:
+    name: LoginLdap
+  config:
+    filename: config/config.ini.php

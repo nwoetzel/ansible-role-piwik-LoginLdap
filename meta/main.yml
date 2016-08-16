@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Nils Woetzel
+  description: Install piwik LoginLdap plugin
+  company: Heidelberg Institute for Theoretical Studies gGmbH, Heidelberg, Germany
+  # same as for the piwik plugin itself
+  license: GPLv3
+  min_ansible_version: 2.0.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  galaxy_tags:
+    - piwik
+    - ldap
+    - login  

@@ -1,0 +1,13 @@
+---
+- name: "add server to config"
+  ini_file:
+    section: "{{ piwik_login_ldap.plugin.name }}_{{ ldap_server_name }}"
+    option: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_dict: "{{ ldap_server }}"
+
+- name: "update ldap servers in config"
+  ini_file: "{{ piwik_config_file }}"
+    section: "{{ piwik_login_ldap.plugin.name }}"
+    option: "servers[]"
+    value: "{{ ldap_server_name }}"

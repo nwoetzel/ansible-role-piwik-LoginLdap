@@ -1,0 +1,11 @@
+---
+# required location of the installation location
+#piwik_install_location: /var/www/html/piwik
+piwik_login_ldap_servers: []
+# add each server in the form:
+#  server_label1:
+#    hostname: "localhost"
+#    port: 389
+#    admin_user: "fury"
+#    admin_pass: "secrets"
+#    base_dn: "dc=avengers,dc=shield,dc=org"
