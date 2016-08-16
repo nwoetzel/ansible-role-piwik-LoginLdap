@@ -1,7 +1,7 @@
 ---
 - name: "set piwik install path"
   set_fact:
-    piwik_path: "{{ piwik_path | default( piwik_install_location ~ '/piwik' }}"
+    piwik_path: "{{ piwik_path | default( piwik_install_location ~ '/piwik' ) }}"
     piwik_plugins_path: "{{ piwik_path | default( piwik_install_location ~ '/piwik/plugins' ) }}"
 
 - name: "set piwik config location"
