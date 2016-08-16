@@ -1,0 +1,4 @@
+# from github
+- src: https://github.com/nwoetzel/ansible-role-piwik
+  version: master
+  path: roles/

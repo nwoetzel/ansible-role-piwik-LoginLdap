@@ -1,1 +1,2 @@
-localhost
+[piwik_latest]
+localhost ansible_connection=local

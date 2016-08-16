@@ -1,0 +1,2 @@
+piwik_install_location: "/tmp"
+piwik_download_version: "latest"

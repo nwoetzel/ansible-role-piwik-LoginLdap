@@ -1,6 +1,6 @@
 ---
 # required location of the installation location
-#piwik_install_location: /var/www/html/piwik
+#piwik_path: /var/www/piwik
 piwik_login_ldap_servers: []
 # add each server in the form:
 #  server_label1:
