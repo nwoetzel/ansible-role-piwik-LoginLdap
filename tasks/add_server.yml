@@ -1,13 +1,20 @@
 ---
+- name: set ldap_server_name and ldap_server from loop variable
+  set_fact:
+    ldap_server_name: "{{ item.key }}"
+    ldap_server:      "{{ item.value }}"
+
 - name: "add server to config"
   ini_file:
+    dest: "{{ piwik_config_file }}"
     section: "{{ piwik_login_ldap.plugin.name }}_{{ ldap_server_name }}"
     option: "{{ item.key }}"
-    value: "{{ item.value }}"
+    value: "\"{{ item.value }}\""
   with_dict: "{{ ldap_server }}"
 
 - name: "update ldap servers in config"
-  ini_file: "{{ piwik_config_file }}"
+  ini_file:
+    dest:  "{{ piwik_config_file }}"
     section: "{{ piwik_login_ldap.plugin.name }}"
     option: "servers[]"
-    value: "{{ ldap_server_name }}"
+    value: "\"{{ ldap_server_name }}\""

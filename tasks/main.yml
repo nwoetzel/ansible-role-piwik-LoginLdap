@@ -14,11 +14,8 @@
 - name: "activate plugin"
   command: "./console plugin:activate {{ piwik_login_ldap.plugin.name }}"
   args:
-    chdir: "{{ piwik_install_location }}"
+    chdir: "{{ piwik_path }}"
 
 - name: "add each ldap server to config.ini.php"
   include: "add_server.yml"
-  vars:
-    ldap_server_name: "{{ item.key }}"
-    ldap_server: "{{ item.value }}"
   with_dict: "{{ piwik_login_ldap_servers }}"
