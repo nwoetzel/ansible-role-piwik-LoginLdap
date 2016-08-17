@@ -2,5 +2,6 @@
 - name: "install from marketplace"
   unarchive:
     src: "{{ piwik_login_ldap.download.marketplace }}/{{ piwik_login_ldap_version | default( piwik_login_ldap.download.version ) }}"
+    copy: no
     dest: "{{ piwik_plugins_path }}"
     creates: "{{ piwik_plugins_path }}/{{ piwik_login_ldap.plugin.name }}"

@@ -2,5 +2,11 @@
 - name: "install from github"
   unarchive:
     src: "{{ piwik_login_ldap.download.github }}/{{ piwik_login_ldap_version | default( piwik_login_ldap.download.version ) }}.zip"
+    copy: no
     dest: "{{ piwik_plugins_path }}"
+    creates: "{{ piwik_plugins_path }}/{{ piwik_login_ldap.plugin.name }}"
+
+- name: "rename installation directory"
+  command: "mv {{ piwik_plugins_path }}/plugin-{{ piwik_login_ldap.plugin.name }}-{{ piwik_login_ldap_version | default( piwik_login_ldap.download.version ) }} {{ piwik_plugins_path }}/{{ piwik_login_ldap.plugin.name }}"
+  args:
     creates: "{{ piwik_plugins_path }}/{{ piwik_login_ldap.plugin.name }}"
