@@ -1,0 +1,2 @@
+[piwik_github]
+localhost ansible_connection=local

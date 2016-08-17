@@ -9,6 +9,9 @@ cache: pip
 
 env:
   - INVENTORY=inventory
+  - INVENTORY=inventory_git
+  - INVENTORY=inventory_github
+  - INVENTORY=inventory_marketplace
 
 # Install ansible
 addons:

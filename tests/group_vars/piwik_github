@@ -1,0 +1,15 @@
+piwik_install_location: "/home/travis"
+piwik_user:      travis
+piwik_group:     travis
+piwik_web_user:  travis
+piwik_web_group: travis
+piwik_download_version: "latest"
+piwik_login_ldap_install_from: "github" 
+piwik_login_ldap_version: "3.2.2"
+piwik_login_ldap_servers:
+  localhost:
+    hostname: "localhost"
+    port: "389"
+    admin_user: "fury"
+    admin_pass: "secrets"
+    base_dn: "dc=avengers,dc=shield,dc=org"
