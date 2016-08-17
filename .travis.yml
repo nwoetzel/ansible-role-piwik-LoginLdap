@@ -40,7 +40,7 @@ script:
   - ansible-playbook test.yml -i ${INVENTORY} --connection=local
 
   # run again to check if it is indempotent
-  - ansible-playbook -i inventory test.yml --connection=local > indempotent.log
+  - ansible-playbook -i ${INVENTORY} test.yml --connection=local > indempotent.log
   - >
     cat indempotent.log
     | grep -q 'changed=0.*failed=0'
