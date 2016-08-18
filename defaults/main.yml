@@ -28,4 +28,5 @@ piwik_login_ldap_config: {}
 
 # call some command after isntallation is finished for some finale setup
 piwik_login_ldap_commands: []
-# loginldap:settings-modify superAccessGroups add ADMINS
+# loginldap:settings-modify accessByLdapGroups set true
+# loginldap:settings-modify superAccessGroups set ADMINS
