@@ -24,3 +24,11 @@
 - name: "add each ldap server to config.ini.php"
   include: "add_server.yml"
   with_dict: "{{ piwik_login_ldap_servers }}"
+
+- name: "add general settings to config.ini.php"
+  ini_file:
+    dest:  "{{ piwik_config_file }}"
+    section: "{{ piwik_login_ldap.plugin.name }}"
+    option: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_dict: "{{ piwik_login_ldap_config }}"

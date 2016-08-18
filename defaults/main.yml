@@ -15,3 +15,13 @@ piwik_login_ldap_servers: {}
 #    admin_user: "fury"
 #    admin_pass: "secrets"
 #    base_dn: "dc=avengers,dc=shield,dc=org"
+
+# see LoginLdap\Config
+piwik_login_ldap_config: {}
+#  enable_random_token_auth_generation = 1
+#  ldap_user_id_field = "samaccountname"
+#  ldap_last_name_field = "sn"
+#  ldap_first_name_field = "givenName"
+#  ldap_alias_field = "cn"
+#  ldap_mail_field = "mail"
+#  instance_name = ""
