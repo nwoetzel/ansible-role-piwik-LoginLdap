@@ -32,3 +32,8 @@
     option: "{{ item.key }}"
     value: "{{ item.value }}"
   with_dict: "{{ piwik_login_ldap_config }}"
+
+- name: "call console commands"
+  command: "./console {{ item }}"
+    chdir: "{{ piwik_path }}"
+  with_items: "{{ piwik_login_ldap_commands }}"
