@@ -8,9 +8,11 @@
   ini_file:
     dest: "{{ piwik_config_file }}"
     section: "{{ piwik_login_ldap.plugin.name }}_{{ ldap_server_name }}"
-    option: "{{ item.key }}"
-    value: "{{ ( item.value.isdigit() ) | ternary( item.value, '\"' ~ item.value ~ '\"' ) }}"
+    option: "{{ ldap_server_item.key }}"
+    value: "{{ ( ldap_server_item.value.isdigit() ) | ternary( ldap_server_item.value, '\"' ~ ldap_server_item.value ~ '\"' ) }}"
   with_dict: "{{ ldap_server }}"
+  loop_control:
+    loop_var: ldap_server_item
 
 - name: "update ldap servers in config"
   ini_file:
