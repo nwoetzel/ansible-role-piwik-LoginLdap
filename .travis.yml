@@ -22,7 +22,7 @@ addons:
 
 install:
   # Install ansible
-  - pip install ansible==2.0.2.0
+  - pip install ansible==2.1.1.0
 
   # Check ansible version
   - ansible --version
